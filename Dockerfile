@@ -6,5 +6,6 @@ RUN ./bootstrap
 RUN ./configure --disable-doxygen-doc --enable-dependency-tracking
 RUN make
 RUN make install
+RUN rm -rf simulavr
 RUN apk del git autoconf automake
 WORKDIR ~/
